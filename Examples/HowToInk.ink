@@ -1,9 +1,10 @@
 //Start
 //Hold alt and type 126 and then release alt for tilde ~
-
 //Variable declarations
 VAR Name = " "
 LIST Inventory = ring, rope
+LIST Locations = (Market) , UncleHouse
+
 
 //DIVERT
 -> TheCityFullOfLiears.Beginning
@@ -48,14 +49,23 @@ But first, you are able to choose from two things:
     You can use the rope to escape
 }
 
-
-
-
-//The end statement for whole story
+At the moment you are at {Locations}.
+You have 2 options
+*Stay at the market place
+    You are still at {Locations}.
+->DONE
+*Go to uncle's house 
+    ~ChangeLocation(UncleHouse)
+    Now you are at {Locations}.
 ->DONE
 
 
 
+=== function ChangeLocation(newLocation)
+~Locations-=Locations
+~Locations+=newLocation
+
+//The end statement for whole story
 
 
 
@@ -83,8 +93,3 @@ But first, you are able to choose from two things:
 
 
 
-
-
-
-
--> END

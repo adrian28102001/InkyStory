@@ -1,0 +1,470 @@
+===Market===
+
+=DiscussionSeller
+You go up to the woman at the fruit stand and ask her what is happening
+You approach the woman at the food stall and ask
+
+*[How much are the oranges?]
+They're 5 per kg
+YOU: But it says they're 7...
+HER: Oh, no it doesn't I mean..
+Why did you ask if you know it...
+I'm just hungry
+    **[Continue reading]
+    HER: I'm not your mom, but you can buy something...
+    YOU:  That's the problem I dont have any money
+    HER: Well, I have some heavy boxes I need to be carried over from the back, if you help me, I'll think what to with you
+->TaskFromSeller
+*[How long have I been here?]
+HER: I didn't start the timer sorry...
+Are you buying something or making my day harder
+*[Can you help me?]
+Can you help me?
+With what? Choosing on what to buy, these oranges were just delivered fresh ripe juicy we also..
+-YOU: No you don't understand
+I don't know where I came from
+It doesn't really matter, what matters is what you will become
+Here, I have a task for you, get those heavy boxes down here
+->TaskFromSeller
+
+=TaskFromSeller
+You go over to the back to get the boxes of fruit
+There's 3 boxes
+one with bananas, oranges and another with melons
+->Work
+
+=Work
+*[Take the melons]
+You take the box of melons but as you lift it up, extecting it to be heavy, you fall down...
+What? 
+These are fake, light melons
+Why did she say they were heavy...
+You get the melons to her and throw drop them down
+WTF is this?
+HER:Stop making such a show you clone
+YOU:Clone
+HER: CLOWN!
+YOU...
+->FightSeller
+*[Take the oranges]
+You take the oranges to her HER: oh put here you are..
+Put them next to the basket with oranges
+You put them next to the oranges but but see that they are a bit of a different colour and texture
+    **[Ask her about the oranges]
+    Why do these oranges look different?
+    HER: They are a different kind of oranges
+    ->Work
+    **[Ignore]
+    HER: Just do your work and stop asking questions..
+    ->Work
+*[Take the bananas]
+You get the bananas from the back and bring them over to her
+HER: Put them next to the oranges and hurry up already, I thought you wanted to eat...
+->Work
+
+=FightSeller
+*[Inquire]
+Why are you lying to the people...
+They're poor and they don't deserve to be treated like this with fake food...
+HER:People? 
+You must be kidding me 
+Have you been living under a rock?
+YOU: I have no idea what you're talking about...
+*[Talk calmly]
+Can you please explain what is going on?
+And why you have empty melons on your stall
+HER: Okay okay..
+We can't talk here 
+Let's go to the back and talk there where noone hears us
+YOU: What are you talking about
+
+-She grabs your hand and pulls you to the back while there's no customers
+
+*[Why are you selling fake fruit]
+HER: Fake fruit to fake people, fair deal to me...
+YOU: What do you mean fake people
+HER: Everyone's lying and you can't tell nowadays who lies and who doesn't even me...
+    **[Inquire about the lie]
+    YOU: So why did you blatantly lie to me when I was at the stand?
+    HER:I'm just trying to survive I'm not one of them
+    If they figure out who I am, they will...
+    YOU: They will what?
+    (in tears)
+    Do the same thing they did to my brother...
+    YOU: What happened to him?
+    ***[Continue reading]
+    ->TheTruth
+    **[Tell me about it]
+    HER: My whole life, has been on the run, hiding, blending into this filthy, fraudulent crowd
+    Living in this routine, doing the same thing over and over and over again, until your mental health gives in
+    HER: I was holding on at one point
+    But now I'm just trying to survive
+    HER: He was the only light in this dark world...
+    YOU: Who's he?
+    ->TheTruth
+*[What is all this?]
+HER: It's all fake
+    **[Insist for more answers!]
+    WTF are you on about?
+    HER: Shush your mouth Jacob...
+    (She turns away)
+    YOU: Wait, how do you know my name? Is it Jacob?
+    HER: What?
+    No...
+    I..
+    My brother was named Jacob, before...
+    **[Listen patiently]
+    HER: The melons, the oranges, the crowd, the news...
+    everything!
+    HER: The amount of lies in this world is beyond imaginable...
+    You can never see the truth
+    HER: Only once did I ever try to believe for the better
+    My little Jacob was such a good little boy
+    - -YOU: Was?
+    ->TheTruth
+
+=TheTruth
+HER: It was me and my brother at the start, he was smaller than me and naive at times
+He always believed
+HER: He thought even in this crowd there you can find good, if you be honest and kind to others
+HER: It was a nice thing to believe in, even I tried it and it made me feel calm, less tense and nervous
+HER: Sometimes its relieveing to say the truth
+But not always...
+*[Continue listening]
+HER: One day, a kid, around age 16-17 approached my desk and asked me to help him
+HER: He was in shock and in my life never seen such a confused yet terrified of something he doesn't realise
+HER: Until I met you...
+    **[What about me?]
+    HER: You're different...
+    If I helped him out sooner maybe he would still be alive, whoever he is
+    **[That sounds like deja vu]
+    HER: Maybe..
+    But it happens everyday
+    Everyday is the same...
+-HER: As usual, my coward self didn't let me help the poor kid, for the purpose of our own safety and  cost of his life
+HER: I did everything for our safety.. anything just to blend in and live another miserable day here
+HER: But Jacob...
+His good soul was the burden of him, and eventually me..
+HER: He gave the boy real fruits and a basket of them
+He went off happy, not suspecting a thing
+*[Continue listening]
+HER: It was just some friendly people helping out a poor kid, in his persepctive
+YOU: But what's wrong with that?
+HER: As I rejected to help him, I went to the back to bring in more oranges, because they were sold out
+HER: As I head to the back, Jacob talks to the boy and tells him something he shouldn't have heard
+HER: And gave him some fruit to run away with
+As he panicked and tried to run for it someone was watching it all
+HER: They took my little Jacob.. and the other boy was never to be seen again...
+    **[Continue listening]
+    -I came back and noone was there
+    HER: Everything was back to normal, apart from everything...
+    YOU: Well, what did you do? They musn't have gotten far?
+    HER: If I made any moves, they would have had me there with them... God saved me then, but I lost hope ever since
+    HER: I was in deep grief, but I was helpless and coudlnt do anything but sell these stupid fake oranges!
+        ***[Continue listening]
+        HER: All I could do was sit quiet and watch...
+        Watch for the ones who watched 
+        HER: And I found a pattern, all these years it was happening right in front of my stand
+        HER: We need to clarify some stuff...
+        How long have you been awake?
+            ****[I do not know]
+            Well if you dont know, that means you don't remember anything right?
+            Of course I don't, but what does that have to do with anything
+            I might have hit my head and fell over
+            HER: At the start everyone thinks like that
+            I see you're different than the other ones
+            YOU: What do I do
+            ****[I just woke up]
+            If you just woke up that means you were the next one
+            You caused a fault in their operation, which means they will be searching for you, if they find you with me...
+            It's over
+            YOU: So what do I have to do?
+            ----You have to blend in somehow 
+            Here, put this cloak on and take my bike, forget about me, I can't be saved
+            I noticed they lure you in with them while you don't understand what the hell is going on
+            But when you do it'll probably be too late..
+            The good thing is now you know what's going on 
+            Someone is at the stand I have to go
+            TAKE MY BIKE AND RUN!
+                *****[RUN]
+                You put the cloak on and start pedalling your way as far away as possibe from that place
+                ->Run
+                *****[Listen in]
+                You pretend to leave and she goes back to the front to serve the buyer
+                HER: Hello, what do you want to buy from our lovely variety of sweet juicy fruits today?
+                Voice 1: Where is the boy?
+                HER: What are you talking about?
+                I only sell fruits
+                Voice 2: If you're hiding him you will be in big trouble miss...
+                Voice 1: Tell us where he is NOW!
+                ->ListenInSkipRunning
+                    
+=ListenInSkipRunning
+*[Continue reading]
+You pretend to leave and she goes back to the front to serve the buyer
+HER: Hello, what do you want to buy from our lovely variety of sweet juicy fruits today?
+Voice 1: Where is the boy?
+HER: What are you talking about?
+I only sell fruits
+Voice 2: If you're hiding him you will be in big trouble miss...
+Voice 1: Tell us where he is NOW!
+    **[Run]
+    ->Run
+    **[Continue listening]
+    HER: You already took my brother what else do you want from meee?
+    Voice 2: We're going to check the back
+    If we find him you're dead
+    They will find you if you stay here 
+    You have to do something...
+        ***[Hide in the trash can]
+        HER: You won't find anything back there, I told you already
+        Voice 1: We'll check for ourselves
+        As you get in the trash can a part of your cloak got stuck and is showing out
+            ****[Fix it ]
+            As you take back your stuck cloak the lid makes a slight noise for them to notice it
+            Voice 2: Hey what was that?
+            HER: Probably rats or something
+            Voice 2: Check the bin while I walk around the perimeter
+            HE's coming over!
+            You have to cover yourself 
+            ****[Bury yourself in rubbish]
+            Voice 2: Hey what was that rustling noise? 
+            HER: It's probably the wind blowing the rubbish
+            Voice 2: Stop making a fool out of me...
+            Hey open that bin up and show me what's there then
+            They're coming over with her!
+            
+            ----You hear as the lid of the bin opens up
+            Voice 1: No rats in here...
+            HER: Maybe they were over there
+            The lid got closed and they start to walk away.
+                *****[Get out]
+                You get out trying not to make any noise and make a run for it with the bike...
+                As you ride away you hear distant thuds and fruits falling down
+                You can only imagine what is happening...
+                ->Run
+                *****[Stay a bit longer]
+                You hear the footsteps distancing themselves away from you
+                You can't make anything out of the converstation but you can hear cries and the words PLEASE NO
+                Suddenly everything stopped, no noise, no cires
+                SILENCE...
+                You get out of the bin, remove the orange peels from your cloak
+                 ******[Peek to the front]
+                 You sneaked up along the wall to peek to the front of the stand and...
+                NOTHING
+                ->Run
+                 ******[RUN away]
+                 ->Run
+        ***[RUN(they will see)]
+        You get on the bike as quick as you can and start pedaling, forgetting all the noise you're making
+        Voice 1: HEY! There he is!
+        Stop right there or you will never see her again...
+        HER: No Jacob RUN!
+        They hit her in the head and she falls to the ground
+        You cannot do anything or they will catch you...
+        They hit her in the head and she falls to the ground
+        You cannot do anything or they will catch you...
+        ->Run
+
+=Run
+*[Continue reading]
+You have been cycling for a long time and you've reached the outskirts of the city 
+You are really tired and hungry
+You need to find a place where you can eat
+    **[Rest a while]
+    You have an orange in your pocket, what a discovery
+    You start to peel it and enjoy the fruit
+    For the first time today you feel like you can rest and enjoy a short moment of life as you look into the sunset
+    As you put the first slice into your mouth you notice a car drive by you and a boy is sittin on the back seat looking at you
+    You notice something unusual about his face expression
+    ->FollowTheCar
+    **[Continue riding]
+    You continue riding.. You're on your last breath and an orange falls out of your pocket
+        ***[Stop and pick it up]
+        You stop the bike and go on the middle of the road to go and pick it up
+        You see it got mushed a bit from the fall but it's still edible. You go to pick it up but notice a car coming
+        You can't pick it up now so you wait for the car to pass
+        (SPLUSH!)
+        What a jerk!
+        Ran it over as if he didn't have the whole road to drive on
+        ***[Continue riding]
+        You drive away and notice a car coming behind you
+        You move more to the right for safety
+        The car tires skid a bit and you hear a screetch behind you..The driver thankfuly managed to avoid hitting you
+        YOU: It must have been the orange that fell out of my pocket..
+        That could have ended badly...
+        ---As the car passed you saw a boy on the front seat staring at you with the most scared eyes you've ever seen
+        ->FollowTheCar
+
+
+
+=FollowTheCar
+*[Continue reading]
+You decide to follow the car
+What if that boy needs my help?
+What if he was the next one as she said?
+The road is long and curvy and you see it goes right around the field
+Maybe if I run across the corn field I will cut the distance and catch them in time?
+    **[Run across the field]
+    You ditch the nike and start running as fast as your legs can take you.
+    You see the car is alreadyt half way though the turn
+    You're already exhasted and it's as if hope is fading away when suddenly
+    The car stops
+    It stopped at the petrol station, but you don't know if you will manage before he gets back 
+    You continue running as fast as you can
+    You see the man leaving the car and heading for the building
+    The buy is still there!
+    You wave at the boy to catch his attention
+    He looks at you in shock
+         ***[Continue reading]
+         You keep on running and as soon as you get up to the road you see the man exit the store
+         The kid is in shock as he drops the folder he took from the glove compartment and the driver enters the car..
+         You can't do anything, or else the man will catch you...
+        You were too late..
+        And the car went off
+        Now you are all alone, in the middle of nowhere
+        Living in this cruel world
+        But you are free, free from anyone to tell you what to do next...
+        ->DONE
+    **[Ride along the road]
+    You continue riding the bike with your 2nd breath taking intto action all your force in each pedal spin
+    The car is starting to get away, and it seems like you will never catch it
+    When suddenly it stops..
+    It stopped at the petrol station, but you don't know if you will manage before he gets back 
+    It seems he's searching for something in the car so you have some time to catch up
+    You see the man heading for the building and now at the last 200 meters you ditch the bike and run towards the car
+    You get up to the car and the kid notices your presence but tries to hide it
+        ***[Carefully open the door]
+        You try to open the door, but its closed...
+        The kid is looking at you in dispair...
+        ***[Knock on the window]
+        You knock on the window.. but no reply from the boy
+        ---YOU: Hey kiddo, open up the window, I can help you!
+        The kid winds down the window
+        As he opens up the window a mini bus parks the car to the next petrol tank and blocks the view from the shop... 
+        You don't have a lot of time till he comes back
+            ****[Abandon the kid]
+            This man is evil you need to be careful out there...
+            HIM: What do you mean? He's my uncle...
+            YOU: He's not your uncle.. you have to believe me
+            HIM: But what will he do to me?
+            YOU: I don't know, all I know is that I escaped him and now I'm just trying to warn you
+            HIM: But how can you leave me then
+            YOU: I can't do anything.. I'm just the same as you
+            HIM: Nooo...
+            YOU: Just listen to me.. He will notice us ogether if we run and then we will both get caught
+            YOU: I'm trying to warn you.. If you have the chance to escape later you need to take it...
+            No matter the danger
+            ->DONE
+            ****[Save him]
+            HIM: Who are you?
+            YOU:
+            *****[I'm your guardian angel]
+            HIM: What's that supposed to mean?
+            YOU: It doesn't matter for now...
+            You are in danger!
+            YOU:That man is not who he says he is.. He's evil and has malicious thoughts in his mind about you
+            HIM: But he's my uncle he said..
+            I don't even know you
+            YOU: You can believe him...
+            But soon it'll be too late...
+            You have to make a choice now!
+            HIM: What choice?
+            YOU: Open up the window and get out of the car...
+            He climbs out of the car and you stand together facing each other
+                ******[Continue reading]
+                HIM: What now?
+                YOU: Take my cloak, and my bike
+                it's down the road.. People will be looking for you
+                But you have to be careful and not believe anyone here.. You will run away and never turn back.. you hear me?
+                HIM: But what about you?
+                YOU: I have to find out what this man is up to and you...
+                As you say the words you hear the shop door open
+                YOU: Hide in front of this van! Go-go
+                HIM: In tears
+                You jump inside of the car as quickly as possible and wind up the window as it was  
+                You sit quiet in the car and just patiently pray and hope that the kid got away safely
+                Okay, so, ready to go home?
+
+                ->GoingHomeWithTheCar
+
+            *****[I am you]
+            HIM: How is that even possible
+            YOU: Just look at us... Look at yourself in the mirror
+            He turns the rear view mirror to himself and the look on his face was stone-like
+            He looked at the mirror and at you
+            He did that a couple of times and then in a trembling voice said:
+            HIM: Are you my brother?
+                ******[Lie]
+                YOU: You are my brother...
+                HIM: (In disbelief)
+                YOU: You need to listen to me very carefully
+                We don't have a lot of time to explain everything
+                Take my cloak and hide in the shadows of the city
+                Take my bike and ride towards the end of the world
+                Escape all the lies and stones thrown at you on the way
+                HIM: I don't want to lose you bro...
+                    YOU: You have to listen to me.. I'm older than you.. technically
+                    *******[Continue reading]
+                    HIM: (Sobbing)
+                    YOU: I L...
+                    The shop door opened, the man is coming over to the car
+                    HIM: (Sobbing)
+                    YOU: I L...
+                    The shop door opened, the man is coming over to the car
+                    YOU: Go-go, get behind the van
+                    Remember me..
+                    Brother
+                    You jump in the car through the window and hurriedly wind it up so he doesn't notice anything
+                    Okay, so, ready to go home?
+
+                     ->GoingHomeWithTheCar
+                ******[Say the truth]
+                YOU: I am a copy of you.. the exact copy, just I was made a day ealier than you
+                HIM: What? How?
+                YOU: Do you remember anything what happened before you woke up?
+                HIM: No..
+                YOU: Did you listen to the people talking next to you? 
+                HIM: Yeah.. 
+                YOU: Do you realise that...
+                HIM: But.. but how you know?
+                YOU: Because I did the same thing...
+                HIM: Trying to make sense of everything that is happening
+                    *******[Continue reading]
+                    YOU: You have to listen, because we don't have much time before he comes back
+                    HIM: Tell me what I have to do
+                    YOU: You need to blend in with everyone
+                    I will go instead of you so you can escape
+                    HIM: But he will do something to you...
+                    YOU: I won't let that happen, in any case, you will escape
+                    YOU: Take my cloak so they won't recognise you and bike to get away. It's back down the road you will find it
+                    CLING
+                    The shop door opens and you hear the man coughing and walking towards the car
+                    You push the kid to hide behind the van and jump through the car window, closing it as soon as you hit the seat
+                    The kid looks at you in terror as the man walks up to the car
+                    Hey, what do you think you're doing
+                    Why did you open the window
+                    ********[I was car sick]
+                    HIM: Better not throw up all over the car...
+                    YOU: No, don't worry, I'm better now...
+                    ********[I like the smell of petrol that's all]
+                    HIM: You maniac..
+                    Wanna die sooner?
+                    YOU: It's not that bad...
+                    --------HIM: Let's go home now...
+                    ->GoingHomeWithTheCar
+                    
+=GoingHomeWithTheCar
+*[But where's home?]
+YOU: But where's home?
+Uncle Ben: ....
+
+*[Stay quiet]
+YOU: ...
+HIM: I'll take that as a yes. 
+
+-You start driving and see the kid in the cloak staring at you the whole way until you lost sight of him
+You get to his house
+
+->DONE
+
