@@ -1,9 +1,15 @@
 VAR askedAboutParents = false
-VAR lockpick = false
-VAR readLeaflet = true
+VAR readLeaflet = true //read in the car
 VAR atePotato = true
 VAR hasRing = false
 VAR usedHammer = false
+VAR home = false
+VAR picture = false
+VAR drankWater = false
+VAR checkedGloves = false
+VAR checkedCarDoor = false
+VAR resist = false
+VAR checkedTheCar = false
 ===Discussion===
 
 
@@ -24,7 +30,7 @@ Voice 2: He shouldn't have gone far Voice 1: Does he know the way home?
 ->Point1
 
 
-*[Anwer to her]
+*[Answer to her]
 YOU: Um.. Hi.. I'm just looking around
 (Muffled voice in background) 
 \-didn't survive
@@ -34,6 +40,7 @@ YOU: I'm looking for..
 \-is he ready yet?
     **[Home]
     HER: First time I hear a perosn who doesn't know where he lives 
+    ~home = true
     (giggles)
     HER: This city is full of lies anyway so I don't care...
     (Muffled voice in background) 
@@ -78,8 +85,7 @@ YOU:Um sorry
 Excuse me for that
 ->DONE
 *[Confront the men]
-YOU: Who are you looking for? 
-YOU: You said home? 
+{home: YOU: You said home? | YOU: Who are you looking for? }
 ->Point2
 
 =Point2
@@ -186,7 +192,7 @@ I'm surprised you don't remember your uncle
     I was the only family left so I took you in and took care you ever since
     YOU: (In shock)
         ***[Who was he]
-        HIM: This was a mustery to me ever since.. I'm sorry you have to hear this but...
+        HIM: This was a mystery to me ever since.. I'm sorry you have to hear this but...
 
         ***[I'm speachless]
         HIM: You have the same reaction every time..
@@ -199,13 +205,9 @@ I'm surprised you don't remember your uncle
 You must be hungry, still some time before we have dinner so...
 
 *[You're quite hungry. Accept]
-Take the snack
-YOU:
-Thanks
-Uncle BEN:
-This your last meal, eh? haha
-YOU
-What do you mean? 
+YOU:Thanks
+Uncle BEN: This your last meal, eh? haha
+YOU: What do you mean? 
 Uncle BEN: Oh, I mean is this the last thing you ate?
 YOU: Yeah, since I woke up..
 Uncle BEN: Don't worry, plenty of food at home
@@ -221,9 +223,7 @@ Why did he ask if it was my last meal, as if I'm a sentenced prisoner...
     ---Okay, we're gonna stop here, I need to fill the car
     ->CarScenePetrolStation
 *[You're quite hungry. Decline]
-Refuse the snack
-Uncle BEN:
-As you want..
+Uncle BEN: As you want..
 Noticed you still have an attitude
 YOU: ...
     **[Continue]
@@ -250,12 +250,15 @@ You look outside and in the middle of nowhere see a figure running through the f
 towards you
 YOU: Strange, maybe he lives nearby?Why is he running here
 I should pretend I'm searching for something
+~checkedTheCar = true
 ->Point1
 
 
+
 =Point1
-+[Check the glove compartment]
+*[Check the glove compartment]
 The glove compartment has:
+~checkedGloves = true
 I. A folder, 
 II. Wipes
 III. Cloths
@@ -265,6 +268,7 @@ V. A pitcure
     The picture looks to be a class photo
     Must be his child somewhere in there or a relative maybe
     So i guess he has a family...
+    ~picture = true
     **[Read leaflet]
     The leaflet is actually a guide on how to pick locks might be useful
     ~readLeaflet = true
@@ -273,16 +277,16 @@ V. A pitcure
     nothing unusual.
     **[Resist]
     --
-        ***[Check the other object]
-        He comes from the back while you are looking at picture/though his folder
+        
+        ***[Check the other compartment]
+        He comes from the back while you are looking through his stuff!
         BEN: What do you think you're doing?!
         ****[Lie]
          YOU: I hit it open with my knee by accident...sorry
-        BEN: Why did you have the (picture/folder) in your hand then
+        BEN: Why did you have my stuff in your hands then
             *****[Lie]
             YOU: It fell out as it opened...
-            BEN: Hm...
-            Interesting
+            BEN: Hm... Interesting
             YOU: ...
             ->HisHouse
             *****[Apologize]
@@ -301,33 +305,39 @@ V. A pitcure
         You sit quiet and wait for him to come back
         Okay, so kiddo, ready to go home?
         ->Point2
+        {not checkedCarDoor:
         ***[Look what the door has]
         ->Point1
+        }
 
 
-+[Check the door compartment]
-
+*[Check the door compartment]
 The door has :
+~checkedCarDoor = true
 I. a bottle full of liquid 
 II. a survival key ring
     **[Steal the key ring]
     You took the key ring 
      ~hasRing = true
+     {not checkedGloves:
         ***[You can look though the glove compartment]
         ->Point1
+        }
         ***[Resist]
         Okay, so kiddo, ready to go home?
         ->Point2
     **[Drink from the bottle]
     It wasn't water 
-    you spit it put and he is coming
+    you spit it out and you start caughing out the weird liquid. He hears you caughing and comes over to the car...
+    ~drankWater = true
     Uncle Ben:
     What do you think you're doing drinking car fluid?
     You should have asked before you did that
     You have a dry mouth and really need a shower
     YOU: Do you have some water maybe?
     HIM: Only at home, you'll take a shower and you'll be fine
-    ->DONE
+    HIM: Stay here I'm gonna go pay for the petrol and come back.. and leave the car liquid alone..
+    ->Point1
     
 =Point2
 *["But where's home?"]
@@ -336,10 +346,12 @@ Uncle Ben: ....
 
 *[Stay quiet]
 I'll take that as a yes
--YOU: I wonder who that was running through the field
-You get to his house
-
-->DONE
+-
+{checkedTheCar : 
+YOU: I wonder who that was running through the field
+}
+**[Continue]
+->HisHouse
 
 ===HisHouse===
 You get to his house
@@ -457,38 +469,40 @@ You start picking up the potatoes and when suddenly you notice the light getting
         ***[Continue]
         You walk down to the dark basement and the only light is from the small barred window that lets in the moonlight 
         You have to find a way to escape this place
-        He's a sociopath...
-            ****[Search the basement]
-            You look around the basement for stuff you can find useful
-            {
-            - lockpick: You have to wait a while until he goes away so its safe to unlock the door
-                ->Point1
-            - readLeaflet: You look around the basement and find a lot of random stuff
-            You see a bag of hair clips, tools, tires, ropes
-            You find get the bag of hairclips and remember that you read the leaflet in the car on how to pick locks
-            ->Point1
-            - else: You look around the basement and find a lot of random stuff.
-            You see a bag of hair clips, tools, tires, ropes
-            You find a tool set
-            You can maybe use a hammer to break the door but it'll make a lot of noise 
-            ->Point1
-            }
-            You just have to wait for the right moment.
-            ****[Eat a raw potato first]
-            You take one of the potatoes from the bag and wipe it clean with your shirt
-            ~atePotato = true
-            It tastes weird but you haven't ate in a while so that's the best and only option
-            ->Point1
+        He's a sociopath... ->Point4
+
+=Point4
+*[Search the basement]
+You look around the basement for stuff you can find useful
+{
+- hasRing: You have to wait a while until he goes away so its safe to unlock the door
+    ->Point1
+- readLeaflet: You look around the basement and find a lot of random stuff
+You see a bag of hair clips, tools, tires, ropes
+You find get the bag of hairclips and remember that you read the leaflet in the car on how to pick locks
+->Point1
+- else: You look around the basement and find a lot of random stuff.
+You see a bag of hair clips, tools, tires, ropes
+You find a tool set
+You can maybe use a hammer to break the door but it'll make a lot of noise 
+->Point1
+
+}
+You just have to wait for the right moment.
+*[Eat a raw potato first]
+You take one of the potatoes from the bag and wipe it clean with your shirt
+~atePotato = true
+It tastes weird but you haven't ate in a while so that's the best and only option
+->Point4
         
 =Point1
 It got even darker you haven't heard much noise from the house so maybe it is the time to escape...
 {
-    - lockpick: 
+    - hasRing or readLeaflet: 
     ->Point2
-    - readLeaflet:
-     ->Point2
     - else: You go and take the hammer from the tool box and go up to the door
     You smash the lock as hard as you can making a big bang
+    ~usedHammer = true
     ->IfStatement
 }
 =IfStatement
@@ -512,7 +526,7 @@ He's not so dumb to leave it open
 -You run upstairs as fast as possible
 Not knowing where this uncle Ben is..
 
-{lockpick: ->Choice}
+{hasRing: ->Choice}
 {usedHammer: You need to find a way to escape ->DONE}
 
 =Choice
