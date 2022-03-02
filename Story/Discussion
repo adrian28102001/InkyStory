@@ -1,0 +1,339 @@
+VAR askedAboutParents = false
+===Discussion===
+
+
+=Begining
+You get up from the ground and turn away from the strangers and avoid being suspicious 
+As you walk up to a stand of fruits a woman asks you:
+HER: Hello, what do you want to buy from our lovely variety of sweet juicy fruits today?
+Her voice was so quiet and dulled out by every other noice in the market,especially the distant conversation of the two men
+
+*[Ignore the woman]
+You ignore the womans kind attitude and listen in to the conversation which caught your attention instead
+Voice 1: What a petty decision he made last time, sadly didn't survive
+Voice 2: Yeah
+Let's see what the next one will be like
+Voice 1: I don't know if he's ready yet though
+Voice 1: Wait where did he go?
+Voice 2: He shouldn't have gone far Voice 1: Does he know the way home?
+->Point1
+
+
+*[Anwer to her]
+YOU: Um.. Hi.. I'm just looking around
+(Muffled voice in background) 
+\-didn't survive
+HER: What are you looking for? 
+YOU: I'm looking for..
+(Muffled voice in background) 
+\-is he ready yet?
+    **[Home]
+    HER: First time I hear a perosn who doesn't know where he lives 
+    (giggles)
+    HER: This city is full of lies anyway so I don't care...
+    (Muffled voice in background) 
+    \-Home
+    ->Point1
+    **[Melons]
+    HER: Oh you're..
+    Nevermind...
+    How many you want?
+        ***[I'm who?]
+        YOU: What? I'm who you said?
+        HER: I don't know who you are you tell me...
+        ->Point2
+        ->DONE
+        ***[1 for every lie in this city]
+        HER: You have enough money for all of that? I don't think so...
+        Stranger: I do...
+        Both of you look at the man who walked up to you as if you were his child
+        YOU: Give us 10 melons in a box 
+        and put them in the car, I'll give you a ride kiddo
+        (winks at you)
+        YOU: Who even are you? I don't accept stuff from strangers
+        He looks at you in a slight shock
+        HIM: So this is how you repay everythingI've ever done for you?
+        HIM: I was just trying to make you a surprise 
+        It hurt me to hear that your uncle is a stranger yo you 
+            ****[Uncle?]
+            HIM: Uncle, Aunt, Mother Father I'm the only family you have...
+            ****[Stay silent]
+            YOU: ...
+            ----Go get the box of melons and put them in the boot will ya
+            We'll talk in the car...
+            You go to the back where the woman showed you the melons are and take them back to the car
+            As you walk to the car the other guy walks up to you and says
+            ->ConversationWithTom
+        
+            
+=Point1
+*[Blend in hide]
+You drop an orange from the box to the ground to pick it up as they walk past 
+YOU:Um sorry
+Excuse me for that
+->DONE
+*[Confront the men]
+YOU: Who are you looking for? 
+YOU: You said home? 
+->Point2
+
+=Point2
+Voice 1: Oh Jerry!
+There you are we've been searching for you everywhere
+Voice 1: It was so miserable these days, we couldn't find you anywhere
+
+*[Who are you?]
+Voice 1: I'm your uncle, Ben
+Don't you remember me?
+    **[You called me Ben?]
+    YOU: Didn't you call me Jerry just a second ago? wtf?
+    HIM: What? Noo!
+    You didn't get me, I said I'm your uncle Ben.. you're not Ben you're Jerry
+    YOU: Oh.. Ok
+    So will you explain why you're following me?
+    HIM: I'm just trying to make sure you're safe, you fled the house without notice and I was afraid you might get hurt...
+    ->ConversationWithTom
+    **[No I don't]
+    YOU: N...
+    He interrupts you as you start to speak
+    HIM: Of course you don't and it's totally fine
+    ->Point3
+    
+*[You were looking for me?]
+Voice 1: As you're the only thing I have left, I'd go to the edge of the earth to find you
+Thankfully I only had to go to the market
+YOU: But why?
+What happened
+I don't seem to remember
+->Point3
+
+=Point3
+HIM: You must be exhausted from running everywhere
+YOU: 
+*[Where would I run?]
+HIM: Well you ran away from the house not too long ago and I haven't heard from you since
+->ConversationWithTom
+*[Why was I lost]
+HIM: You fleed the house, all teens are like this, I totally understand
+But I hope you're okay
+->ConversationWithTom
+
+
+===ConversationWithTom===
+Voice 2: Uncle Ben really tried everything to keep you safe, since you lost your parents...
+*[Who tf is this guy?]
+YOU: Who are you anyway? 
+BEN: Oh, he's my really good friend I called him up to help look for you
+Voice 2: I'm Tom
+Nice to meet ya
+YOU: Hi, Tom..
+  ->Point1
+*[What happened to my parents?]
+HIM: Are you sure you're okay? 
+Did you take any drugs kid...
+I know you teens are easy to persuade but...
+    **[Just tired I guess]
+    HIM: Come on, let's go home
+    I'll expain everything over dinner
+    ->Point1
+    **[What no!]
+    YOU: Hell nah...
+    HIM: I sure hope not...
+    Let's go home
+    You can take a shower to freshen up
+      ->Point1
+=Point1
+They say goodbye to each other and you get inside the car
+As you walk up to the car you notice the licence plate number
+KI 7734
+IN THE CAR:
+We have quite a long road ahead
+You can take a nap on the back seat if you want
+*[Take a nap]
+YOU: I'm pretty tired, so I guess I will
+You jump over to the back and close your eyes as you look out through the window
+As you were driving you ran something over  on the road and you hit your head on the window
+You wake up in shock 
+BEN: What a maniac!
+    **[What happened?]
+    BEN: This lunatic walked on the middle of the road like he had some kind of death wish
+    **[Stay quite]
+    YOU: ...
+    --Okay, we're gonna stop here, I need to fill the car
+    ->CarScenePetrolStation
+*[Refuse]
+HIM: As you want
+I'm surprised you don't remember your uncle 
+    **[Remind me]
+    YOU: Um, maybe some glimpses are flashing in the back of my memory
+    HIM: Remember the time you went on a school trip and you were car sick so I had to drive 100 miles to get you home
+    HIM: Or the time me and you went fishing and you fell into the lake and I had to get you and let go of the promisingly big fish I was about to catch, coz you couldn't reall swim back then
+    HIM: Don't worry if you don't remember anything. Everything is fine
+    In fact here, take a snack from the back
+    ->Point2
+    **[Tell me about my parents]
+    YOU: SO what happened to my parents?
+    ~askedAboutParents = true
+    HIM: It was tragic..
+    You were with them, and everything was great, you were going on a family vacation...but
+    A crazy driver, probably on drugs, was on the road, and he hit your car which was fatal for your parents...
+    You were the only one who survived, but with a severe head injury, which caused memory loss
+    I was the only family left so I took you in and took care you ever since
+    YOU: (In shock)
+        ***[Who was he]
+        HIM: This was a mustery to me ever since.. I'm sorry you have to hear this but...
+
+        ***[I'm speachless]
+        HIM: You have the same reaction every time..
+        ---Don't worry
+        Everything is fine now
+        In fact here take a snack from the back
+        ->Point2
+        
+=Point2
+You must be hungry, still some time before we have dinner so...
+
+*[You're quite hungry. Accept]
+Take the snack
+YOU:
+Thanks
+Uncle BEN:
+This your last meal, eh? haha
+YOU
+What do you mean? 
+Uncle BEN: Oh, I mean is this the last thing you ate?
+YOU: Yeah, since I woke up..
+Uncle BEN: Don't worry, plenty of food at home
+That was weird
+Why did he ask if it was my last meal, as if I'm a sentenced prisoner...
+    **[Continue]
+    As you were about to eat the snack you feel the gas pedal press and the car accelerate, you ran something over on the road and the snack fell to the ground... For fucks sake can you be more careful?
+    This was the last snack, now you will be hungry till we get home...
+    ***[What happened?]
+    BEN: This lunatic walked on the middle of the road like he had some kind of death wish
+    ***[Stay quite]
+    YOU: ...
+    ---Okay, we're gonna stop here, I need to fill the car
+    ->CarScenePetrolStation
+*[You're quite hungry. Decline]
+Refuse the snack
+Uncle BEN:
+As you want..
+Noticed you still have an attitude
+YOU: ...
+    **[Continue]
+    You look outside the window as you exit the city and head down the open road. As you were driving you see a boy on a bike eating an orange and watching the sunset
+    Oh how you wished to be in his place, and now you regret refusing the snack because watching that boy eat his orange made you hungry
+    You notice the car slowing down
+    ***[Why are we slowing down?]
+    BEN: Okay, we're gonna stop here, I need to fill the car
+    Won't be long
+    ->CarScenePetrolStation
+    ***[Stay quiet]
+    YOU: ...
+    ->CarScenePetrolStation
+    
+===CarScenePetrolStation===
+He went to the station to pay for petrol 
+You can look around
+Try not to get caught
+
+*[Look around the car]
+->Point1
+*[Sit quiet and wait to avoid being caught]
+You look outside and in the middle of nowhere see a figure running through the field
+towards you
+YOU: Strange, maybe he lives nearby?Why is he running here
+I should pretend I'm searching for something
+->Point1
+
+
+=Point1
+*[Check the glove compartment]
+The glove compartment has:
+I. A folder, 
+II. Wipes
+III. Cloths
+IV. A leaflet
+V. A pitcure
+    **[ Observe the picture]
+    The picture looks to be a class photo
+    Must be his child somewhere in there or a relative maybe
+    So i guess he has a family...
+    **[Read leaflet]
+    The leaflet is actually a guide on how to pick locks might be useful
+    **[Look through folder]
+    The folder is full of documents, for the car, insurance, 
+    nothing unusual.
+    **[Resist]
+    --
+        ***[Check the other object]
+        He comes from the back while you are looking at picture/though his folder
+        BEN: What do you think you're doing?!
+        ****[Lie]
+         YOU: I hit it open with my knee by accident...sorry
+        BEN: Why did you have the (picture/folder) in your hand then
+            *****[Lie]
+            YOU: It fell out as it opened...
+            BEN: Hm...
+            Interesting
+            YOU: ...
+            ->HisHouse
+            *****[Apologize]
+            YOU: I'm sorry.. 
+            I won't do it again
+            BEN: You won't have the chance...
+            ->HisHouse
+
+
+        ****[Talk about the picture]
+        YOU: Who's that on the picture?
+        HIM: It's personal
+        Don't touch it
+        ->HisHouse
+        ***[Resist]
+        You sit quiet and wait for him to come back
+        Okay, so kiddo, ready to go home?
+        ->Point2
+        ***[Look what the door has]
+        ->Point1
+
+
+*[Check the door compartment]
+The door has :
+I. a bottle full of liquid 
+II. a survival key ring
+    **[Steal the key ring]
+    You took the key ring 
+        ***[You can look though the glove compartment]
+        ->Point1
+        ***[Resist]
+        Okay, so kiddo, ready to go home?
+        ->Point2
+    **[Drink from the bottle]
+    It wasn't water 
+    you spit it put and he is coming
+    Uncle Ben:
+    What do you think you're doing drinking car fluid?
+    You should have asked before you did that
+    You have a dry mouth and really need a shower
+    YOU: Do you have some water maybe?
+    HIM: Only at home, you'll take a shower and you'll be fine
+    ->DONE
+    
+=Point2
+*["But where's home?"]
+YOU: But where's home?
+Uncle Ben: ....
+
+*[Stay quiet]
+I'll take that as a yes
+-YOU: I wonder who that was running through the field
+You get to his house
+
+->DONE
+
+===HisHouse===
+
+
+->DONE
