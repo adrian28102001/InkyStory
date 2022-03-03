@@ -361,34 +361,34 @@ YOU: I wonder who that was running through the field
 ->HisHouse
 
 ===HisHouse===
-You get to his house
-He offers you dinner or if you want to take a shower first
-If you drank the liquid you will take a shower
-Or if you came from the field
-Else you can choose
-You're also hungry
+
 ->ChechIfNeedShower
 
 =ChechIfNeedShower
 {needShower or drankWater:
+You smell pretty bad after getting dirty...
 ->ShowerScene
--else: -> DinnerScene
+-else:You get to his house
+He offers you dinner or if you want to take a shower first
+You're also hungry
+-> DinnerScene
 }
 
 =ShowerScene
 *[You go and take the shower]
 Uncle BEN: You smell awful
-Them stains don't come off after wash Go get some fresh clothes from the drawer upstairs
-You go upstairs 
-The floor is creaking 
-You need to get to the drawer
+Uncle BEN: Them stains don't come off after wash. Go get some fresh clothes from the drawer upstairs.
+You go up the creaky stairs.
+You need to get to the drawer.
 There are 2 doors:
     **[1st door is closed]
-   {hasRing:
+   {hasRing or readLeaflet:
     ***[Go back and take the shower]
-    ->TheShower 
+    You leave this door and go to his room to avoid being caught sneaking.
+    There's a drawer, a closet a bed in the middle of the room and a window that looks into the street from the second floor.
+    ->Point1 
     ***[Continue opening the door]
-    You try to open up the door with the lockpick you found in the 
+    You try to open up the door with the lockpick you found in the car.
     ->OpenedDoor
     -else: You try to open the first door, but the knob won't budge..
         
@@ -398,7 +398,7 @@ There are 2 doors:
     Go to his room
     Damn I must smell so bad.. I probably stink like a skunk
     Need to take a shower
-    There's a drawer, a closet a bed in the middle of the room and a window that looks into the street from the 2nd floor
+    There's a drawer, a closet a bed in the middle of the room and a window that looks into the street from the second floor
        ->Point1
 
 =DinnerScene  
@@ -462,6 +462,11 @@ As you take the coat you hear something jiggling inside
 The 1st door looks like it was closed 
 You can check if the key fits it
 You get to the 1st door
+
+**[Take the shower]
+->TheShower
+**[Unlock the door]
+
 You need to see which one of the two keys might fit
 ~ temp dice_roll = RANDOM(0, 1)
 { dice_roll == 0:
@@ -470,9 +475,9 @@ You need to see which one of the two keys might fit
 }
 ->OpenedDoor
 =OpenedDoor
-    BINGO!
-    It actually opened
-    Need to be quiet though
+    "BINGO!"
+    "It actually opened"
+    "Need to be quiet though"
     {madeNoiseInTheCar:
     If you got caught
     HIM: Hey it's the other door
@@ -490,6 +495,7 @@ You need to see which one of the two keys might fit
     -else:
     The door didn't creak thankfully, let's see what inside
     }
+    You hear a big load thud from downstairs...
     **[Ignore]
     You see a medical table and bed
     A big locked up closet and a barred up window
@@ -562,10 +568,10 @@ Until you looked at the next one...
             You remembered that you were the one on that picture you found in the car
             -else:
             You realise the licence plate read the word KILLER
-            He's a killer
+            "He's a killer!"
             You're in total shock
              }
-             ----I have to leave this place as soon as possible...
+             ----"I have to leave this place as soon as possible!"
              ->Point6
 =Point5
 You try to open up the door of the closet 
@@ -573,10 +579,10 @@ Suddenly the lock clicks and you remove it from the hook
 You open up the doors and it falls onto you and you fall down to the ground making a big thud
 You open your eyes and observe what just happened 
 You see a person lying on the floor next to you
- You look at his face and,,,
+ You look at his face and...
  *[Continue]
  Its you...
-What is happening
+"What is happening?" You ask yourself in shock.
 ->Point6
 
 
@@ -633,7 +639,7 @@ You wake up in the middle of the market...
 =SecondEnd
 You open up the window and sit on the edge looking down at the ground
 As you sit on the window he comes through the door and shouts:
-WHERE do you think you're going! 
+WHERE do you think you're going?!
 *[Continue]
 {atePotato:
 You jump down onto the ground
@@ -647,69 +653,64 @@ You fall down awkwardly and spain your ankle
 =EndingPart
 You hear the front door unlock and realise what is happening
     BEN: Hey!
-    Where do you think you're going?!
+    BEN: Where do you think you're going?!
     *[Continue]
-    I will find you no matter what you puny fuck
-    You start running away as fast as your legs can take you
-    You managed to get away from the man
-    You walked down the same road you came from
-    A long neverending road cutting through the middle of the forest
+    BEN: I will find you no matter what you puny fuck!
+    You start running away as fast as your legs can take you.
+    You managed to get away from the man.
+    You walked down the same road you came from, which cuts through the middle of the forest.
     ->TheEnding
 ->END
 
 =Point8
- As you're walking on the empty road 
-    You start to get dizzy and halucinate
-    You see a figure approaching you quite quickly
-    Your heart starts racing but you're so tired you can't do anything
+ As you're walking on the empty road, you start to get dizzy and halucinate.
+    You see a figure approaching you quite quickly.
+    Your heart starts racing, but you're so tired you can't do anything.
     *[Continue]
-    SOMEONE: Hey
-    Get on the bike let's go
-    I've been hoping I would find you 
-    Let's get away from here
+    SOMEONE: Hey! Get on the bike! Let's go
+    SOMEONE: I've been hoping I would find you... 
+    SOMEONE: Let's get away from here.
     You get on the bike with the boy you actually saved from an immenent fate at the petrol station. You are now fighting against the world as a whole, together... Because noone knows what's gonna happen tomorrow...
 ->END
 
 ===TheEnding===
 *[Continue]
 {not savedBoy and atePotato :
-You pass the old station you went past and you see a cloak on the ground
-OMG 
-That's the cloak I gave him...
-Poor kid
-You get the cloak and put it on yourself
-And continue walking along the empty road, through the fog
-Not knowing what may await for you around the corner
+You pass the old station you went past and you see a cloak on the ground...
+"OMG" 
+"That's the cloak I gave him..."
+"Poor kid"
+You get the cloak and put it on yourself and continue walking along the empty road, through the misty fog, not knowing what may await for you around the corner...
 ->END
 }
 
 {(savedBoy and atePotato) or (not atePotato and savedBoy) :
-As you're walking on the empty road 
-You start to get dizzy and halucinate
-You see a figure approaching you quite quickly
-Your heart starts racing but you're so tired you can't do anything
-*[Continue]
-SOMEONE: Hey
-Get on the bike let's go
-I've been hoping I would find you 
-Let's get away from here
-    **[Continue]
-    You get on the bike with the boy you actually saved from an immenent fate at the petrol station. You are now fighting against the world as a whole, together... Because noone knows what's gonna happen tomorrow...
+As you're walking on the empty road, you start to get dizzy and halucinate.
+You see a figure approaching you quite quickly.
+Your heart starts racing, but you're so tired you can't do anything.
+
+SOMEONE: Hey!
+SOMEONE: Get on the bike and let's go!
+SOMEONE: I've been hoping I would find you.. 
+SOMEONE: Let's get away from here!
+    
+    You get on the bike with the boy you actually saved from an immenent fate at the petrol station. You are now fighting against the world as one whole, together. Because no one knows what's gonna happen tomorrow...
     ->END
 }
 
 {not savedBoy and not atePotato :
-You walk down the road alone
-Through the dark foggy night
-Your legs start to give in and you fall to the 
+You walk down the road alone.
+Through the dark foggy night.
+Your legs start to give in and you fall to the ground... 
 *[Continue]
 You close your eyes even if your soul doesn't want you to, but your body just can't take it anymore...
+The next thing you know:
+**[Continue]
 You wake up in the middle of the market...
 ->END
 }
 
 ->END
-
 
 
 ===Dinner===
