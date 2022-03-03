@@ -10,6 +10,11 @@ VAR checkedGloves = false
 VAR checkedCarDoor = false
 VAR resist = false
 VAR checkedTheCar = false
+VAR madeNoiseInTheCar = false
+VAR tookTheShower = false
+VAR hurtedLeg = false
+VAR savedBoy = false
+
 ===Discussion===
 
 
@@ -281,6 +286,7 @@ V. A pitcure
         ***[Check the other compartment]
         He comes from the back while you are looking through his stuff!
         BEN: What do you think you're doing?!
+        ~madeNoiseInTheCar = true
         ****[Lie]
          YOU: I hit it open with my knee by accident...sorry
         BEN: Why did you have my stuff in your hands then
@@ -360,24 +366,29 @@ If you drank the liquid you will take a shower
 Or if you came from the field
 Else you can choose
 You're also hungry
+
 *[Shower]
 Uncle BEN: You smell awful
 Them stains don't come off after wash Go get some fresh clothes from the drawer upstairs
 You go upstairs 
 The floor is creaking 
 You need to get to the drawer
-There are 2 doors
+There are 2 doors:
     **[1st door is closed]
-    You try to open the first door, but the knob won't budge..
-    If you have a lock pick you can open this door key ring
+   {hasRing:
     You try to open up the door with the lockpick you found in the car
-    ->DONE
+    ->OpenedDoor
+    -else: You try to open the first door, but the knob won't budge..
+    
+    }
+  
     **[2nd door is open looks like his room]
     Go to his room
     Damn I must smell so bad.. I probably stink like a skunk
     Need to take a shower
     There's a drawer, a closet a bed in the middle of the room and a window that looks into the street from the 2nd floor
        ->Point1
+       
 *[Dinner] 
 BEN: I'm gonna prepare a meal in the kitchen, you can put on the telly in the living room
 You go to the living room and turn on the TV
@@ -386,6 +397,9 @@ BEN: Why you not watching the TV?
 YOU: Nothing interesting on there
 BEN: Come and help me then
 ->Dinner
+
+
+
 =Point1
  *[Closet]
 You open up the closet and you see a bunch of outfits
@@ -398,6 +412,8 @@ The peculiar thing is that they are all the same...
     ->Point1
 ->DONE
 *[Drawer]
+You walk up to the drawer 
+It has four compartments
 ->Drawer
 *[Bed]
 The bed looks so comfy.. I'd fall asleep straight away
@@ -405,13 +421,11 @@ Need to get a shower though first
 ->Point1
 
 =Drawer
-You walk up to the drawer 
-It has four compartments
     **[1st compartment]
     It has some tshirts and jumpers
-        ***[Take them]
+        ***[Take them continue searching]
         ->Drawer
-        ***[Go to the closet and take the outfit]
+        ***[Continue searching]
         ->Drawer
     **[2nd compartment]
     You see that it has some pants and boxers, you can take them to get dressed later
@@ -438,18 +452,243 @@ You need to see which one of the two keys might fit
 { dice_roll == 0:
     Darn it.. this one doesn't fit
     Let's hope this one fits...
-    ->DONE
-  - else:
+}
+->OpenedDoor
+=OpenedDoor
     BINGO!
     It actually opened
     Need to be quiet though
-     ->DONE
+    {madeNoiseInTheCar:
+    If you got caught
+    HIM: Hey it's the other door
+    Don't you dare look into my stuff withput my persmision
+    
+   {tookTheShower:
+    YOU: No I'm not touching anything
+    HIM: Just put you stuff there and come here
+    -else:
+    YOU: Oh, I didn't know, sorry
+    HIM: Go get your shower and come back to me I need your help
+   }
+    That was close..
+    He's definitely hiding something inside that room
+    -else:
+    The door didn't creak thankfully, let's see what inside
+    }
+    **[Ignore]
+    You see a medical table and bed
+    A big locked up closet and a barred up window
+    ->Point3
+    **[Ask what Happened]
+    YOU: Is everything alright? 
+    BEN: Come down here I need your help!
+    You get downstairs
+    //DINARY
+->DONE
+=Point3
+You don't know what to make of it all and walk up to the medical table to see if it has the answers 
+    You see folders with SECRET stamps on them and all sorts of documents spad out across the table
+    ->Point4
+    
+=Point4
+*[Open secret document]
+As you open the folder you feel like you have the answers to all the questions in the world yet you don't know nor the questions nor the answers..yet
+You start reading and looking through the papers, and all the documents have one word in common
+Clone, cloning, copy, clonisation...and on and on and on
+You're so confused and shocked at what you just found
+You move away from the table and your back hits the closet as something inside wobbles
+    **[Peek inside first]
+    You see a tiny crack in between the wooden door of the closet
+    As you peek inside you can barely make out a thing
+    Its hard to see but it looks like something big and heavy
+    Thankfully its not alive
+        ***[Leave it]
+        It looks like something is inside but it'll be too risky to see what it actually is
+        ->Point4
+        ***[Open]
+        ->Point5
+    **[Open up]
+    ->Point5
+*[Open brown plain file]
+You open up the sealed brown file and take out a dozen of photos
+You start looking thorugh them not knowing who these people are in them, they look to be family photo.
+They were all happy photos, nothing suspicious in fact
+Until you looked at the next one...
+    **[Continue]
+    They were all happy photos, nothing suspicious in fact
+    Until you looked at the next one...
+    And the next one after that
+    Photos of a car crash
+    You look at the back and see a note
+    Summer 2019 family vacation
+    
+    {askedAboutParents:
+    OMG
+    That's me..
+    on the left
+    That was the car crash he was talking about
+    -else: Some of them were too hard to look at...
+    Others were disurbing just at the slightest thought
+    }
+         ***[Continue]
+         You look at the next pictures of the car crash of the two cars 
+        You're shocked at the impact..
+        You notice in the smashed up front of the car no licence plate
+        It was on the ground a couple of metres away
+        The liecence plate read:
+        KI 7734
+        You suddenly realise that this was the exact number plate of your uncles car..
+             ****[Continue]
+             {askedAboutParents and tookTheShower:
+            So he was the one on drugs.. 
+            The ones from the bathroom
+            HE WAS THE ONE WHO KILLED MY PARENTS
+            If you saw the picture you will remember:
+            You remembered that you were the one on that picture you found in the car
+            -else:
+            You realise the licence plate read the word KILLER
+            He's a killer
+            You're in total shock
+             }
+             ----I have to leave this place as soon as possible...
+             ->Point6
+=Point5
+You try to open up the door of the closet 
+Suddenly the lock clicks and you remove it from the hook
+You open up the doors and it falls onto you and you fall down to the ground making a big thud
+You open your eyes and observe what just happened 
+You see a person lying on the floor next to you
+ You look at his face and,,,
+ *[Continue]
+ Its you...
+What is happening
+->Point6
+
+
+=Point6
+You hear footsteps coming up the stairs
+->Point7
+
+=Point7
+You run to the other room before he notices 
+*[Jump out of the window]
+{hurtedLeg: 
+->FirstEnd 
+-else: 
+->SecondEnd
 }
 
+=FirstEnd
+WHERE DO YOU THINK YOU'RE GOING!?
+{atePotato:
+You decide to break the window open
+The glass shatters into pieces and you jump onto the window sill
+You jump though the glass window
+breaking its remaining parts and hitting the ground on your foo
+Adrenaline kicks in and you start crawling away from the house onto the road
+-else:
+You decide to break the window open
+The glass shatters into pieces and you jump onto the window sill
+You jump though the glass window
+breaking its remaining parts and hitting the ground on your hurt foot 
+You are in agony and you are exhausted from everything
+}
+{savedBoy:
+Your vision is blurry and you can't make out a thing
+You notice someone approaching you 
+He puts forward his hand and you wipe your eyes
+It's that kid you saw at the petrol station!
+Come on
+Get on the bike quick before he comes 
+You hear the front door unlock and realise what is happening
+You get on the bike with your with that boy
+Who is in fact you..
+BEN: Hey!
+Where do you think you're going?!
+I will find you no matter what you puny fuck
+You ride off into the sunset with your new.. brother twin, artificial but nethertheless, you stuck behind each others back just like real brothers and whatever life will bring on to you coming forward, you will manage and get through it together
+->END
+-else:
+You see him open the front door and walk towards you
+He hits you on the head and then the next thing you know...
+You wake up in the middle of the market...
+->END
+}
+->DONE
+=SecondEnd
 
+->DONE
+You open up the window and sit on the edge looking down at the ground
+As you sit on the window he comes through the door and shouts:
+WHERE do you think you're going! 
 
+{atePotato:
+You jump down onto the ground
+You hit your knee a litlle but you manage to keep your balance and keep running away
+->EndingPart
+-else:
+You fall down awkwardly and spain your ankle 
+->EndingPart
+}
 
+=EndingPart
+You hear the front door unlock and realise what is happening
+    BEN: Hey!
+    Where do you think you're going?!
+    I will find you no matter what you puny fuck
+    You start running away as fast as your legs can take you
+    You managed to get away from the man
+    You walked down the same road you came from
+    A long neverending road cutting through the middle of the forest
+    ->TheEnding
+->END
 
+=Point8
+ As you're walking on the empty road 
+    You start to get dizzy and halucinate
+    You see a figure approaching you quite quickly
+    Your heart starts racing but you're so tired you can't do anything
+    SOMEONE: Hey
+    Get on the bike let's go
+    I've been hoping I would find you 
+    Let's get away from here
+    You get on the bike with the boy you actually saved from an immenent fate at the petrol station. You are now fighting against the world as a whole, together... Because noone knows what's gonna happen tomorrow...
+->END
+
+===TheEnding===
+
+{not savedBoy and atePotato :
+You pass the old station you went past and you see a cloak on the ground
+OMG 
+That's the cloak I gave him...
+Poor kid
+You get the cloak and put it on yourself
+And continue walking along the empty road, through the fog
+Not knowing what may await for you around the corner
+->END
+}
+
+{(savedBoy and atePotato) or (not atePotato and savedBoy) :
+As you're walking on the empty road 
+You start to get dizzy and halucinate
+You see a figure approaching you quite quickly
+Your heart starts racing but you're so tired you can't do anything
+SOMEONE: Hey
+Get on the bike let's go
+I've been hoping I would find you 
+Let's get away from here
+You get on the bike with the boy you actually saved from an immenent fate at the petrol station. You are now fighting against the world as a whole, together... Because noone knows what's gonna happen tomorrow...
+}
+
+{not savedBoy and not atePotato :
+You walk down the road alone
+Through the dark foggy night
+Your legs start to give in and you fall to the ground
+You close your eyes even if your soul doesn't want you to, but your body just can't take it anymore...
+You wake up in the middle of the market...
+}
+
+->END
 
 
 

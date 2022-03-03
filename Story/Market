@@ -1,3 +1,5 @@
+VAR needShower = false
+
 ===Market===
 
 =DiscussionSeller
@@ -219,6 +221,7 @@ Voice 1: Tell us where he is NOW!
         ***[Hide in the trash can]
         HER: You won't find anything back there, I told you already
         Voice 1: We'll check for ourselves
+        ~needShower = true
         As you get in the trash can a part of your cloak got stuck and is showing out
             ****[Fix it ]
             As you take back your stuck cloak the lid makes a slight noise for them to notice it
@@ -344,6 +347,7 @@ Maybe if I run across the corn field I will cut the distance and catch them in t
         As he opens up the window a mini bus parks the car to the next petrol tank and blocks the view from the shop... 
         You don't have a lot of time till he comes back
             ****[Abandon the kid]
+            
             This man is evil you need to be careful out there...
             HIM: What do you mean? He's my uncle...
             YOU: He's not your uncle.. you have to believe me
@@ -361,6 +365,7 @@ Maybe if I run across the corn field I will cut the distance and catch them in t
             YOU:
             *****[I'm your guardian angel]
             HIM: What's that supposed to mean?
+            ~savedBoy = true
             YOU: It doesn't matter for now...
             You are in danger!
             YOU:That man is not who he says he is.. He's evil and has malicious thoughts in his mind about you
@@ -405,6 +410,7 @@ Maybe if I run across the corn field I will cut the distance and catch them in t
                 Escape all the lies and stones thrown at you on the way
                 HIM: I don't want to lose you bro...
                     YOU: You have to listen to me.. I'm older than you.. technically
+                    ~savedBoy = true
                     *******[Continue reading]
                     HIM: (Sobbing)
                     YOU: I L...
@@ -464,7 +470,7 @@ YOU: ...
 HIM: I'll take that as a yes. 
 
 -You start driving and see the kid in the cloak staring at you the whole way until you lost sight of him
-You get to his house
+**[Continue reading]
 
-->DONE
+->HisHouse
 
