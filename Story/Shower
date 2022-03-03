@@ -1,0 +1,98 @@
+VAR needMedKit = false
+VAR counter = 0
+
+===TheShower===
+You get downstairs and enter the bathroom
+As you're about to close the door lock you notice that it doesn't close properly.. and the door can be opened up
+
+*[Ask about the door]
+YOU: Hey, why doesn't the lock work?
+HIM: You don't need to worry I'm not gonna go inside I have work to do
+*[Take a shower anyway]
+-You close the door and put the lock on anyway, though you realise it's pointless
+You put your clothes on the hanger and get in the shower
+You notice an odd tile on the wall
+~tookTheShower = true
+    **[Pull it out]
+    
+    ~hurtedLeg = true
+    As you pull the tile out it drags the its shards of cement as they fall into the bath tub
+    Out of shock you lose balance
+    You step on one of the shards and it cuts your foot.
+    The blood starts running down the bath tub as the immenent pain starts to hurt you
+    You hold your foot in pain and get out of the shower to search for a band aid
+    You stumble over to the sink
+    **[Push it back in]
+    You push the tile back in and make nothing of it and turn on the hot water...
+    As you watch the water run down the drain you notice something red in the gasket
+    You get down to observe and realise it is a dry blood stain, already getting wet from the water
+    You stop the water and get out of the shower as you dry yourself
+    Your hair is all messed up, try and hind a brush in the cupboard
+    --You open the cupboard above the sink to check if it has a
+     {needMedKit: med kit ->HardChoices | brush->HardChoices}
+    =HardChoices
+    {counter == 4: 
+    ->Point1
+    }
+        ***[Medical kit]
+        
+        {needMedKit: 
+        Oh this is what I need
+        Where's the plaster 
+        You put on the plaster where you cut your 
+        ~counter ++
+        -else:
+        Good to know there's a medical kit if anything happens
+        ~counter ++
+        }
+        ***[Brush]
+        You brush your hair
+        Finally I don't look 
+        ~counter ++
+        ***[Pills]
+        
+        ~counter ++
+        {askedAboutParents: 
+        Wonder if these pills are prescribed to him..
+        Strange
+        -else: 
+        He probably takes pills from stress
+        }
+        ***[Clip]
+        
+        {readLeaflet: 
+        ~counter ++
+        Oh this could come in handy
+        -else:
+        ~counter ++
+        My hair isn't long enogh for a hair clip
+        You put it back
+        }
+        --- ->HardChoices
+        
+=Point1
+You close the cupboard and look at yourself in the mirror
+{picture: 
+OMG
+I look just like that kid...
+-else:
+I'm so handsome
+
+Need to put on some muscle though
+}
+-You get dressed and go to your uncle
+Put your clothes on the drawer on the second floor and come back to me
+You go upstairs 
+The floor is creaking 
+You need to get to the drawer
+There are 2 doors
+{hasRing or readLeaflet:
+    *[Open the door]
+    ->HisHouse.OpenedDoor
+    *[Put the clothes back and go to dinner]
+    ->HisHouse.DinnerScene
+    -else:
+    You go to his room and pt your old clothes on the drawer and head downstairs for dinner
+    ->HisHouse.DinnerScene
+}
+

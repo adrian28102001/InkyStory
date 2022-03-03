@@ -1,3 +1,4 @@
+
 VAR askedAboutParents = false
 VAR readLeaflet = true //read in the car
 VAR atePotato = true
@@ -11,10 +12,9 @@ VAR checkedCarDoor = false
 VAR resist = false
 VAR checkedTheCar = false
 VAR madeNoiseInTheCar = false
-VAR tookTheShower = false
-VAR hurtedLeg = false
+VAR tookTheShower = false //need
+VAR hurtedLeg = false //need
 VAR savedBoy = false
-
 ===Discussion===
 
 
@@ -22,7 +22,7 @@ VAR savedBoy = false
 You get up from the ground and turn away from the strangers and avoid being suspicious 
 As you walk up to a stand of fruits a woman asks you:
 HER: Hello, what do you want to buy from our lovely variety of sweet juicy fruits today?
-Her voice was so quiet and dulled out by every other noice in the market,especially the distant conversation of the two men
+Her voice was so quiet and dulled out by every other noise in the market, especially the distant conversation of the two men
 
 *[Ignore the woman]
 You ignore the womans kind attitude and listen in to the conversation which caught your attention instead
@@ -38,18 +38,19 @@ Voice 2: He shouldn't have gone far Voice 1: Does he know the way home?
 *[Answer to her]
 YOU: Um.. Hi.. I'm just looking around
 (Muffled voice in background) 
-\-didn't survive
+\"-didn't survive..."
 HER: What are you looking for? 
-YOU: I'm looking for..
 (Muffled voice in background) 
-\-is he ready yet?
-    **[Home]
-    HER: First time I hear a perosn who doesn't know where he lives 
+\"-is he ready yet?..."
+YOU: I'm looking for...
+
+    **[My way home]
+    HER: First time I hear a perosn who doesn't know where he lives.
     ~home = true
     (giggles)
     HER: This city is full of lies anyway so I don't care...
     (Muffled voice in background) 
-    \-Home
+    \"-Home"
     ->Point1
     **[Melons]
     HER: Oh you're..
@@ -59,7 +60,7 @@ YOU: I'm looking for..
         YOU: What? I'm who you said?
         HER: I don't know who you are you tell me...
         ->Point2
-        ->DONE
+
         ***[1 for every lie in this city]
         HER: You have enough money for all of that? I don't think so...
         Stranger: I do...
@@ -84,12 +85,12 @@ YOU: I'm looking for..
         
             
 =Point1
-*[Blend in hide]
+*[Mind your own business]
 You drop an orange from the box to the ground to pick it up as they walk past 
-YOU:Um sorry
-Excuse me for that
-->DONE
-*[Confront the men]
+YOU: Um sorry...
+Excuse me for that.
+->Market.DiscussionSeller
+*[Get involved in the background converstation]
 {home: YOU: You said home? | YOU: Who are you looking for? }
 ->Point2
 
@@ -366,8 +367,16 @@ If you drank the liquid you will take a shower
 Or if you came from the field
 Else you can choose
 You're also hungry
+->ChechIfNeedShower
 
-*[Shower]
+=ChechIfNeedShower
+{needShower or drankWater:
+->ShowerScene
+-else: -> DinnerScene
+}
+
+=ShowerScene
+*[You go and take the shower]
 Uncle BEN: You smell awful
 Them stains don't come off after wash Go get some fresh clothes from the drawer upstairs
 You go upstairs 
@@ -376,19 +385,25 @@ You need to get to the drawer
 There are 2 doors:
     **[1st door is closed]
    {hasRing:
-    You try to open up the door with the lockpick you found in the car
+    ***[Go back and take the shower]
+    ->TheShower 
+    ***[Continue opening the door]
+    You try to open up the door with the lockpick you found in the 
     ->OpenedDoor
     -else: You try to open the first door, but the knob won't budge..
-    
+        
     }
-  
+    
     **[2nd door is open looks like his room]
     Go to his room
     Damn I must smell so bad.. I probably stink like a skunk
     Need to take a shower
     There's a drawer, a closet a bed in the middle of the room and a window that looks into the street from the 2nd floor
        ->Point1
-       
+
+=DinnerScene  
+*[Shower]
+->ShowerScene
 *[Dinner] 
 BEN: I'm gonna prepare a meal in the kitchen, you can put on the telly in the living room
 You go to the living room and turn on the TV
@@ -406,7 +421,7 @@ You open up the closet and you see a bunch of outfits
 The peculiar thing is that they are all the same...
     **[Take an outfit(shower)]
     You take the outfit and without any hesitation go back downstairs to the bathroom 
-    //SHOWER
+    ->TheShower
     ->DONE
     **[Look for something else]
     ->Point1
@@ -616,12 +631,10 @@ You wake up in the middle of the market...
 }
 ->DONE
 =SecondEnd
-
-->DONE
 You open up the window and sit on the edge looking down at the ground
 As you sit on the window he comes through the door and shouts:
 WHERE do you think you're going! 
-
+*[Continue]
 {atePotato:
 You jump down onto the ground
 You hit your knee a litlle but you manage to keep your balance and keep running away
@@ -635,6 +648,7 @@ You fall down awkwardly and spain your ankle
 You hear the front door unlock and realise what is happening
     BEN: Hey!
     Where do you think you're going?!
+    *[Continue]
     I will find you no matter what you puny fuck
     You start running away as fast as your legs can take you
     You managed to get away from the man
@@ -648,6 +662,7 @@ You hear the front door unlock and realise what is happening
     You start to get dizzy and halucinate
     You see a figure approaching you quite quickly
     Your heart starts racing but you're so tired you can't do anything
+    *[Continue]
     SOMEONE: Hey
     Get on the bike let's go
     I've been hoping I would find you 
@@ -656,7 +671,7 @@ You hear the front door unlock and realise what is happening
 ->END
 
 ===TheEnding===
-
+*[Continue]
 {not savedBoy and atePotato :
 You pass the old station you went past and you see a cloak on the ground
 OMG 
@@ -673,19 +688,24 @@ As you're walking on the empty road
 You start to get dizzy and halucinate
 You see a figure approaching you quite quickly
 Your heart starts racing but you're so tired you can't do anything
+*[Continue]
 SOMEONE: Hey
 Get on the bike let's go
 I've been hoping I would find you 
 Let's get away from here
-You get on the bike with the boy you actually saved from an immenent fate at the petrol station. You are now fighting against the world as a whole, together... Because noone knows what's gonna happen tomorrow...
+    **[Continue]
+    You get on the bike with the boy you actually saved from an immenent fate at the petrol station. You are now fighting against the world as a whole, together... Because noone knows what's gonna happen tomorrow...
+    ->END
 }
 
 {not savedBoy and not atePotato :
 You walk down the road alone
 Through the dark foggy night
-Your legs start to give in and you fall to the ground
+Your legs start to give in and you fall to the 
+*[Continue]
 You close your eyes even if your soul doesn't want you to, but your body just can't take it anymore...
 You wake up in the middle of the market...
+->END
 }
 
 ->END
@@ -765,14 +785,19 @@ He's not so dumb to leave it open
 -You run upstairs as fast as possible
 Not knowing where this uncle Ben is..
 
-{hasRing: ->Choice}
-{usedHammer: You need to find a way to escape ->DONE}
+{hasRing or readLeaflet: 
+->Choice
+-else: 
+You need to find a way to escape ->HisHouse.Point7
+}
+
 
 =Choice
 *[Secret room]
 You sneakely try to pick lock the locked room and after a couple of minutes you manage to open it up
-->DONE
+->HisHouse.OpenedDoor
+
 *[His room ]
 You enter his room and see a window
 You hear footsteps at the back of the house approaching the stairs
-->DONE
+->HisHouse.Point7

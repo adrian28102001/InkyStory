@@ -1,10 +1,10 @@
 VAR needShower = false
 
 ===Market===
-
-=DiscussionSeller
 You go up to the woman at the fruit stand and ask her what is happening
 You approach the woman at the food stall and ask
+->DiscussionSeller
+=DiscussionSeller
 
 *[How much are the oranges?]
 They're 5 per kg
@@ -19,34 +19,31 @@ I'm just hungry
 ->TaskFromSeller
 *[How long have I been here?]
 HER: I didn't start the timer sorry...
-Are you buying something or making my day harder
+HER: Are you buying something or making my day harder?
 *[Can you help me?]
 Can you help me?
 With what? Choosing on what to buy, these oranges were just delivered fresh ripe juicy we also..
 -YOU: No you don't understand
-I don't know where I came from
-It doesn't really matter, what matters is what you will become
-Here, I have a task for you, get those heavy boxes down here
+YOU: I don't know where I came from
+HER: It doesn't really matter, what matters is what you will become.
+Here, I have a task for you, get those heavy boxes down here!
 ->TaskFromSeller
 
 =TaskFromSeller
-You go over to the back to get the boxes of fruit
-There's 3 boxes
-one with bananas, oranges and another with melons
+AUTHOR: You go over to the back to get the boxes of fruit.    There's 3 boxes: one with bananas, oranges and another with melons...
 ->Work
 
 =Work
 *[Take the melons]
-You take the box of melons but as you lift it up, extecting it to be heavy, you fall down...
-What? 
-These are fake, light melons
-Why did she say they were heavy...
-You get the melons to her and throw drop them down
-WTF is this?
-HER:Stop making such a show you clone
-YOU:Clone
+AUTHOR: You take the box of melons but as you lift it up, extecting it to be heavy, you fall down...
+What? These are fake, light melons
+AUTHOR: Why did she say they were heavy...
+You get the melons to her and drop them down
+YOU: WTF is this?
+HER: Stop making such a show you clone
+YOU: Clone?
 HER: CLOWN!
-YOU...
+YOU: ...
 ->FightSeller
 *[Take the oranges]
 You take the oranges to her HER: oh put here you are..
@@ -66,11 +63,10 @@ HER: Put them next to the oranges and hurry up already, I thought you wanted to 
 
 =FightSeller
 *[Inquire]
-Why are you lying to the people...
-They're poor and they don't deserve to be treated like this with fake food...
-HER:People? 
-You must be kidding me 
-Have you been living under a rock?
+YOU: Why are you lying to the people...
+YOU: They're poor and they don't deserve to be treated like this with fake food...
+HER: People?  You must be kidding me 
+HER: Have you been living under a rock?
 YOU: I have no idea what you're talking about...
 *[Talk calmly]
 Can you please explain what is going on?
@@ -82,10 +78,10 @@ YOU: What are you talking about
 
 -She grabs your hand and pulls you to the back while there's no customers
 
-*[Why are you selling fake fruit]
+*[Why are you selling fake fruit ?]
 HER: Fake fruit to fake people, fair deal to me...
-YOU: What do you mean fake people
-HER: Everyone's lying and you can't tell nowadays who lies and who doesn't even me...
+YOU: What do you mean fake people ? 
+HER: Everyone's lying and you can't tell nowadays who lies and who doesn't, even me...
     **[Inquire about the lie]
     YOU: So why did you blatantly lie to me when I was at the stand?
     HER:I'm just trying to survive I'm not one of them
@@ -98,11 +94,9 @@ HER: Everyone's lying and you can't tell nowadays who lies and who doesn't even 
     ->TheTruth
     **[Tell me about it]
     HER: My whole life, has been on the run, hiding, blending into this filthy, fraudulent crowd
-    Living in this routine, doing the same thing over and over and over again, until your mental health gives in
-    HER: I was holding on at one point
-    But now I'm just trying to survive
-    HER: He was the only light in this dark world...
-    YOU: Who's he?
+    Living in this routine, doing the same thing over and over and over again, until your mental health gives in.
+    HER: I was holding on at one point , but now I'm just trying to survive! He was the only light in this dark world...
+    YOU: Who's "he" ?
     ->TheTruth
 *[What is all this?]
 HER: It's all fake
@@ -125,12 +119,8 @@ HER: It's all fake
     - -YOU: Was?
     ->TheTruth
 
-=TheTruth
-HER: It was me and my brother at the start, he was smaller than me and naive at times
-He always believed
-HER: He thought even in this crowd there you can find good, if you be honest and kind to others
-HER: It was a nice thing to believe in, even I tried it and it made me feel calm, less tense and nervous
-HER: Sometimes its relieveing to say the truth
+=TheTruth 
+HER: It was me and my brother at the start, he was smaller than me and naive at times. He always believed.He thought even in this crowd there you can find good, if you are honest and kind to others. It was a nice thing to believe in, even I tried it and it made me feel calm, less tense and less nervous. Sometimes its relieveing to say the truth 
 But not always...
 *[Continue listening]
 HER: One day, a kid, around age 16-17 approached my desk and asked me to help him
