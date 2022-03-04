@@ -20,6 +20,7 @@ VAR savedBoy = false
 =Begining
 You get up from the ground and turn away from the strangers and avoid being suspicious 
 As you walk up to a stand of fruits a woman asks you:
+#IMAGE: Media/Seller.jpg
 HER: Hello, what do you want to buy from our lovely variety of sweet juicy fruits today?
 Her voice was so quiet and dulled out by every other noise in the market, especially the distant conversation of the two men
 
@@ -56,6 +57,7 @@ YOU: I'm looking for...
     Nevermind...
     How many you want?
         ***[I'm who?]
+        #IMAGE: Media/Start.jpg
         YOU: What? I'm who you said?
         HER: I don't know who you are you tell me...
         ->Point2
@@ -99,6 +101,7 @@ There you are we've been searching for you everywhere
 Voice 1: It was so miserable these days, we couldn't find you anywhere
 
 *[Who are you?]
+#IMAGE: Media/IAmBen.jpg
 Voice 1: I'm your uncle, Ben
 Don't you remember me?
     **[You called me Ben?]
@@ -116,6 +119,8 @@ Don't you remember me?
     ->Point3
     
 *[You were looking for me?]
+#IMAGE: Media/WhoLookingFor.jpg
+
 Voice 1: As you're the only thing I have left, I'd go to the edge of the earth to find you
 Thankfully I only had to go to the market
 YOU: But why?
@@ -128,10 +133,12 @@ HIM: You must be exhausted from running everywhere
 YOU: 
 *[Where would I run?]
 HIM: Well you ran away from the house not too long ago and I haven't heard from you since
+#IMAGE: Media/ConversationWithTom.jpg
 ->ConversationWithTom
 *[Why was I lost]
 HIM: You fleed the house, all teens are like this, I totally understand
 But I hope you're okay
+#IMAGE: Media/ConversationWithTom.jpg
 ->ConversationWithTom
 
 

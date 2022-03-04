@@ -4,6 +4,7 @@ VAR needShower = false
 
 ->DiscussionSeller
 =DiscussionSeller
+#IMAGE: Media/Seller.jpg
 You go up to the woman at the fruit stand and ask
 *[How much are the oranges?]
 HER: They're 5 per kg
