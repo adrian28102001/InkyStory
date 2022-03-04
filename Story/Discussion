@@ -1,6 +1,5 @@
-
 VAR askedAboutParents = false
-VAR readLeaflet = true //read in the car
+VAR readLeaflet = true 
 VAR atePotato = true
 VAR hasRing = false
 VAR usedHammer = false
