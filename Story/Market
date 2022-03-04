@@ -69,6 +69,8 @@ HER: Put them next to the oranges and hurry up already, I thought you wanted to 
 
 =FightSeller
 *[Inquire]
+#IMAGE: Media/Argument.jpg
+
 YOU: Why are you lying to the people...
 YOU: They're poor and they don't deserve to be treated like this with fake food...
 HER: People?  You must be kidding me 
@@ -96,6 +98,8 @@ HER: Everyone's lying and you can't tell nowadays who lies and who doesn't, even
     ***[Continue reading]
     ->TheTruth
     **[Tell me about it]
+    #IMAGE: Media/EmotionalConversation.jpg
+
     HER: My whole life, has been on the run, hiding, blending into this filthy, fraudulent crowd.
     HER: Living in this routine, doing the same thing over and over and over again, until your mental health gives in.
     HER: I was holding on at one point , but now I'm just trying to survive! He was the only light in this dark world...
@@ -120,6 +124,8 @@ HER: It's all fake
     ->TheTruth
 
 =TheTruth 
+#IMAGE: Media/MeAndBrother.jpg
+
 HER: It was me and my brother at the start, he was smaller than me and naive at times. 
 HER: He always believed.He thought even in this crowd there you can find good, if you are honest and kind to others. 
 HER: It was a nice thing to believe in, even I tried it and it made me feel calm, less tense and less nervous. Sometimes its relieveing to say the truth. But not always...
