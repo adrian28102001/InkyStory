@@ -46,6 +46,7 @@ HER: What are you looking for?
 YOU: I'm looking for...
 
     **[My way home]
+    #IMAGE: Media/FirstTimeHearing.jpg
     HER: First time I hear a perosn who doesn't know where he lives.
     ~home = true
     (giggles)
@@ -326,6 +327,8 @@ V. A pitcure
         ->HisHouse
         ***[Resist]
         You sit quiet and wait for him to come back
+        #IMAGE: Media/LetsGoHome.jpg
+
         Okay, so kiddo, ready to go home?
         ->Point2
         {not checkedCarDoor:
@@ -348,6 +351,8 @@ II. a survival key ring
         }
         ***[Resist]
         Okay, so kiddo, ready to go home?
+        #IMAGE: Media/LetsGoHome.jpg
+
         ->Point2
     **[Drink from the bottle]
     It wasn't water 

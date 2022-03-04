@@ -18,8 +18,11 @@ YOU: I'm just hungry
     HER: Well, I have some heavy boxes I need to be carried over from the back, if you help me, I'll think what to with you
 ->TaskFromSeller
 *[How long have I been here?]
+#IMAGE: Media/DiscussionSeller.jpg
+
 HER: I didn't start the timer sorry...
 HER: Are you buying something or making my day harder?
+
 *[Can you help me?]
 Can you help me?
 HER: With what? Choosing on what to buy, these oranges were just delivered, fresh, ripe, juicy we also..
@@ -42,6 +45,8 @@ Why did she say they were heavy..."
 You get the melons to her and drop them down
 YOU: WTF is this?
 HER: Stop making such a show you clone
+#IMAGE: Media/Clone.jpg
+
 YOU: Clone?
 HER: CLOWN!
 YOU: ...
@@ -419,9 +424,12 @@ The road is long and curvy and you see it goes right around the field.
                     HIM: You maniac.. Wanna die sooner?
                     YOU: It's not that bad...
                     --------HIM: Let's go home now... You ready?
+                    
                     ->GoingHomeWithTheCar
         
 =GoingHomeWithTheCar
+#IMAGE: Media/LetsGoHome.jpg
+
 *[But where's home?]
 YOU: But where's home?
 HIM: You'll see...
