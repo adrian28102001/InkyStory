@@ -4,7 +4,6 @@ VAR needShower = false
 
 ->DiscussionSeller
 =DiscussionSeller
-#IMAGE: Media/Seller.jpg
 You go up to the woman at the fruit stand and ask
 *[How much are the oranges?]
 HER: They're 5 per kg
@@ -24,6 +23,7 @@ HER: I didn't start the timer sorry...
 HER: Are you buying something or making my day harder?
 
 *[Can you help me?]
+#IMAGE: Media/CanYouHelpMe.jpg
 Can you help me?
 HER: With what? Choosing on what to buy, these oranges were just delivered, fresh, ripe, juicy we also..
 -YOU: No you don't understand
